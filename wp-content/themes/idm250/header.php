@@ -23,26 +23,6 @@
             'theme_location' => 'primary_menu'
         ]
         );
-    ?>
 
-    <!-- <header>
-        <div>
-            <div id="header-logo">
-                <a href="index.html">
-                    <img src="images/logo.svg" alt="logo">
-                </a>
-            </div>
-            <div id="header-menu">
-                <ul>
-                    <li>
-                        <a href="about_me.html">about.</a>
-                    </li>
-                    <li>
-                        <a href="images/tynandrake-resume.pdf" target="_blank">resume.
-                            <img src="images/homepage/resume-dl-icon.svg" id="resume-dl">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </header> -->
+    ?>
+    
