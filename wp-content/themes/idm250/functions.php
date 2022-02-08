@@ -64,3 +64,24 @@ function cc_mime_types($mimes)
     return $mimes;
 }
 add_filter('upload_mimes', 'cc_mime_types');
+
+
+
+// Custom Menus 
+function idm_render_menu($menu_name)
+{
+    if(!$menu_name) {
+        return;
+    }
+    $locations = get_nav_menu_locations();
+    $menu = wp_get_nav_menu_object($locations[$menu_name]);
+    $menu_items = wp_get_nav_menu_items($menu->term_id, ['order' => 'DESC']);
+    return $menu_items;
+}
+
+// image support on content pages
+function add_post_thumbnails_support()
+{
+    add_theme_support('post-thumbnails');
+}
+add_action('after_setup_theme', 'add_post_thumbnails_support');
