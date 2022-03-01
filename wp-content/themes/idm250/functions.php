@@ -1,14 +1,18 @@
-<?php 
-if(version_compare('7.4', phpversion(), '>')) {
+<!-- Required -->
+<?php
+if (version_compare('7.4', phpversion(), '>')) {
     die('You must be using PHP 7.4 or greater.');
 }
 
-if(version_compare($GLOBALS['wp_version'], '5.8.2', '<')) {
-    die('WP theme only works in WordPress 5.8.2 or later. Please upgrade your WP site version.');
+if (version_compare($GLOBALS['wp_version'], '5.9.1', '<')) {
+    die('WP theme only works in WordPress 5.9.1 or later. Please upgrade your WP site version.');
 }
 
+require get_template_directory() . '/includes/post-types.php';
 
-function include_styles() 
+// Add CSS into wp_head()
+
+function include_styles()
 
 {
     wp_enqueue_style(
@@ -20,10 +24,10 @@ function include_styles()
         get_template_directory_uri() . '/dist/styles/main.css'
     );
 }
-
-// Add css into wp_head()
 add_action('wp_enqueue_scripts', 'include_styles');
 
+
+// Add JS into wp_foot
 
 function include_js_files()
 
@@ -36,28 +40,27 @@ function include_js_files()
         true
     );
 }
-
-// add javascript into wp_foot
 add_action('wp-enqueue_scripts', 'include_js_files');
 
 
 
-// register menus on the site
+// Register menus on the site
 
 function register_theme_navigation()
 
 {
     register_nav_menus(
         [
-        'primary_menu' => 'Primary Menu',
-        'footer_menu' => 'Footer Menu',
+            'primary_menu' => 'Primary Menu',
+            'footer_menu' => 'Footer Menu',
         ]
     );
 }
 add_action('after_setup_theme', 'register_theme_navigation');
 
 
-// svg support
+// SVG support
+
 function cc_mime_types($mimes)
 {
     $mimes['svg'] = 'image/svg+xml';
@@ -68,9 +71,10 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 // Custom Menus 
+
 function idm_render_menu($menu_name)
 {
-    if(!$menu_name) {
+    if (!$menu_name) {
         return;
     }
     $locations = get_nav_menu_locations();
@@ -79,9 +83,16 @@ function idm_render_menu($menu_name)
     return $menu_items;
 }
 
-// image support on content pages
+
+// Featured Image support 
+
 function add_post_thumbnails_support()
 {
     add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'add_post_thumbnails_support');
+
+
+// Custom taxonomies (categories) 
+
+require get_template_directory() . '/includes/taxonomies.php';

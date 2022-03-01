@@ -21,13 +21,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'local_idm250');
+define('DB_NAME', 'tynandra_idm250_wp');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'tynandra_admin');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'Srx7bmw27@');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -82,8 +82,9 @@ $table_prefix = 'wp_';
  */
 define('WP_DEBUG', true);
 
-define('WP_HOME', 'http://localhost:8888/');
-define('WP_SITEURL', 'http://localhost:8888/');
+define('WP_HOME', 'http://tynandrake-design.com/idm250-thd44');
+
+define('WP_SITEURL', 'http://tynandrake-design.com/idm250-thd44');
 
 
 /* Add any custom values between this line and the "stop editing" line. */

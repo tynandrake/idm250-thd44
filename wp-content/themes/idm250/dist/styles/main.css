@@ -16,11 +16,6 @@ h2 {
 h4 {
     margin: 0;
 }
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
 a {
     text-decoration: none;
 }
@@ -33,11 +28,12 @@ a {
     font-family: Playfair Display;
     font-size: 22px;
     font-weight: 600;
+    align-items: end;
+    padding-bottom: 15px;
 }
 .menu-main-menu-container > ul{
     display: flex;
     align-items: baseline;
-    height: 70px;
 }
 .menu-main-menu-container ul {
     display: flex;
@@ -46,7 +42,7 @@ a {
     list-style: none;
 }
 #menu-item-36 {
-    padding: 20px 0 0 60px;
+    padding: 0px 0 0 60px;
 }
 #menu-item-28, #menu-item-29, #menu-item-41 {
     padding-left: 70px;
@@ -59,6 +55,19 @@ a {
 .menu-main-menu-container ul li a:hover{
     color: #513CD6;
 }
+.header-container {
+    display: flex;
+    margin-left: 30px;
+}
+.header-search-container {
+    display: flex;
+    align-items: end;
+    padding: 15px 30px;
+}
+.search-form {
+    display: flex;
+}
+
 
 
 /* Footer */
@@ -68,6 +77,7 @@ a {
     height: 90px;
     justify-content: flex-end;
     align-items: center;
+    list-style: none;
 }
 #menu-item-46 {
     display: flex;
@@ -82,7 +92,10 @@ a {
     display: flex;
     width: 100%;
 }
-#menu-footer img {
+#menu-footer {
+    padding-left: 0;
+}
+.footer-img {
     width: 30px;
     filter: brightness(0%);
 }
@@ -97,8 +110,392 @@ a {
 }
 
 /* Front */
-#front-reverse {
+
+    /* Post Styling */
+
+.front-post {
+    background-color: #0B1B43;
+    color: #FDE14E;
+}
+.front-inside-container {
+    padding: 83px 112px;
+    max-width: 3000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.front-grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-left: -40px;
+}
+.front-grid-reverse {
     flex-direction: row-reverse;
+}
+.front-grid-column-text {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+    padding-left: 40px;
+}
+.front-grid-column-image-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 50%;
+    padding-left: 40px;
+}
+.front-grid-column-2 {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding-left: 30px;
+    text-align: right;
+}
+.front-grid-wrapper-labels {
+    display: flex;
+    flex-wrap: wrap;
+}
+.front-p-label {
+    font-family: Raleway, sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+}
+#front-p-label-2 {
+    text-align: left;
+}
+.front-post-header {
+    font-family: Playfair Display, serif;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 48px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.front-post-button-wrapper {
+    margin-top: 70px;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.front-post-button {
+    background-color: #FDE14E;
+    color: #000000;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8.5px 20px;
+    border-radius: 8.5px;
+    border-style: solid;
+    border-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    transition: .2s background-color ease-in-out, .2s color ease-in-out, .2s border-color ease-in-out, .2s opacity ease-in-out, .2s box-shadow ease-in-out;
+}
+.front-grid-column-image {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: url(http://localhost:8888/wp-content/uploads/2022/02/proj1-thumb-large-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-height: 513px;
+    text-align: center;
+}
+#post-2 {
+    background-color: #EE702A;
+}
+#post-2-image {
+    background-image: url(http://localhost:8888/wp-content/uploads/2022/02/proj6_thumb-scaled.jpg);
+}
+#post-3 {
+    background-color: #513CD6;
+}
+#post-3-image {
+    background-image: url(http://localhost:8888/wp-content/uploads/2022/02/proj3_thumb-large.jpeg);
+}
+#post-4 {
+    background-color: #C10B42;
+}
+#post-4-image {
+    background-image: url(http://localhost:8888/wp-content/uploads/2022/02/proj4_thumb-large.jpeg);
+}
+#post-5 {
+    background-color: #106A24;
+}
+#post-5-image {
+    background-image: url(http://localhost:8888/wp-content/uploads/2022/02/gallery_thumb-large2.jpg);
+}
+
+/* Single */
+.single-header-container {
+    background-color: #FDE14E;
+}
+.single-inside-container {
+    padding: 52px 104px;
+    max-width: 3000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.single-grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.single-grid-40 {
+    width: 40%;
+}
+.single-grid-60 {
+    width: 60%;
+}
+.single-grid-40-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+.single-header-h1 {
+    font-family: Playfair Display, serif;
+    text-align: left;
+    color: #513CD6;
+    font-size: 82px;
+    font-weight: 700;
+    line-height: 72px;
+    margin-bottom: 15px;
+}
+.single-grid-20 {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    margin-top: 0;
+    margin-right: 0;
+}
+.single-grid-50 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    margin-top: 0;
+    margin-right: 0;
+}
+.single-grid-60-image {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #513CD6;
+    background-image: url(http://localhost:8888/wp-content/uploads/2022/02/proj6_thumb-scaled.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-height: 590px;
+}
+
+.single-inside-center-container {
+    padding: 52px 25px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.single-h2 {
+    font-family: Playfair Display, serif;
+    text-align: center;
+    color: #513CD6;
+    font-size: 64px;
+}
+.single-p {
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    font-size: 20px;
+}
+.single-content-container {
+    margin-bottom: 52px;
+}
+.single-content-inside-container {
+    padding-right: 25px;
+    padding-left: 25px;
+    max-width: 1460px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.single-grid-50 {
+    width: 50%;
+}
+.single-grid-text-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+.single-grid-50-text {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.single-image {
+    background-image: url(http://localhost:8888/wp-content/uploads/2022/02/proj6-research.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    min-height: 530px;
+}
+.single-image-container {
+    margin-left: -70px;
+}
+.single-grid-image-padding {
+    padding-left: 70px;
+}
+.single-content-inside-container-text {
+    padding-right: 25px;
+    padding-left: 25px;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.single-h4-ul {
+    font-family: Raleway, sans-serif;
+    text-align: center;
+    font-size: 35px;
+    line-height: 70px;
+}
+.single-header-style {
+    font-family: Playfair Display, serif;
+    text-align: center;
+}
+.single-h3 {
+    font-size: 48px;
+}
+.single-h4 {
+    font-size: 36px;
+}
+.single-h5 {
+    font-size: 24px;
+}
+.single-h6 {
+    font-size: 20px;
+}
+.single-ol {
+    font-family: Raleway, sans-serif;
+    text-align: left;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 70px;
+    margin-bottom: 52px;
+}
+.single-table-container {
+    margin: 0 0 1em;
+    overflow-x: auto;   
+}
+.single-table-container table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: left;
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+}
+.single-content-inside-container-text-650 {
+    padding-right: 25px;
+    padding-left: 25px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.single-p-left {
+    font-family: Raleway, sans-serif;
+    text-align: left;
+    font-size: 20px;
+}
+
+/* Single-Dynamic */
+h1,h2,h3,h4,h5,h6 {
+    font-family: Playfair Display, serif;
+}
+h1 {
+    font-size: 82px;
+}
+h2 {
+    font-size: 70px;
+}
+h3 {
+    font-size: 64px;
+}
+h4 {
+    font-size: 56px;
+}
+h5 {
+    font-size: 48px;
+}
+h6 {
+    font-size: 24px;
+}
+p, ul li, ol li, .wp-block-button, figcaption {
+    font-family: Raleway, sans-serif;
+    text-align: left;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+table, tr, td{
+    font-family: Raleway, sans-serif;
+    font-size: 20px;
+    border: 1px solid;
+    max-width: 750px;
+}
+tr, td {
+    padding: 10px;
+}
+.wp-block-button__link {
+    background-color: #FDE14E;
+    color: black;
+    padding: 8.5px 20px;
+    border-radius: 8.5px;
+    transition: .1s ease-in-out;
+}
+.wp-block-button__link:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid;
+    cursor: pointer;
+}
+p {
+    line-height: 32px;
+}
+.wp-block-quote p {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Work */
+.work-search-container {
+    margin-top: 52px;
+    margin-bottom: 52px;
+    text-align: center;
+}
+.work-search-inside-container {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.work-search-box {
+    display: flex;
+    flex: auto;
+    flex-wrap: nowrap;
+    max-width: 100%;
 }
 
 /* 404 */
@@ -124,6 +521,10 @@ h1.gb-headline-282ff13d {
     #menu-item-36 {
         padding: 20px 0 0 30px;
     }
+    #rmp-container-47 {
+        padding-top: 470px;
+    }
+
 
     /* Front */
     #section > .gb-inside-container {
@@ -150,4 +551,24 @@ h1.gb-headline-282ff13d {
         line-height: 0;
         max-width: 100%;
     }
+
+    /* Single - Dynamic */
+    .single-grid-60-image {
+        min-height: 350px;
+    }
+    .single-inside-container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .single-grid-wrapper {
+        display: block;
+    }
+    .single-grid-60 {
+        width: 100%;
+    }
+    .single-grid-40 {
+        width: 100%;
+    }
+
 }
+

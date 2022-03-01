@@ -9,13 +9,19 @@
     <?php wp_head(); ?>
 </head>
 
-<body>
-    <?php 
-    wp_nav_menu(
-        [
-            'theme_location' => 'primary_menu'
-        ]
-        );
-
-    ?>
-    
+<body <?php body_class(); ?>
+<div></div>
+        
+    <div class="header-container">
+        <img src="<?php echo get_template_directory_uri() ?>/dist/images/logo.svg" alt="logo image">
+        <?php 
+            wp_nav_menu(
+                [
+                    'theme_location' => 'primary_menu'
+                ]
+                );
+        ?>
+    <div class="header-search-container">
+        <?php get_template_part('components/search-form')?>
+    </div>
+    </div>
