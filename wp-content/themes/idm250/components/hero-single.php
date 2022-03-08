@@ -1,4 +1,4 @@
-<div class="single-header-container">
+<div class="single-header-container" style="background-color:<?php the_field('teaser-color'); ?>">
     <div class="single-inside-container">
         <div class="single-grid-wrapper">
             <div class="single-grid-40">
@@ -17,7 +17,8 @@
                 </div>
             </div>
             <div class="single-grid-60">
-                <div class="single-grid-60-image"></div>
+                <?php if (get_field('header-image')); ?>
+                <div class="single-grid-60-image" style="background-image: url('<?php the_field('header-image'); ?>');"></div>
             </div>
         </div>
     </div>

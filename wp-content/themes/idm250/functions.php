@@ -1,4 +1,3 @@
-<!-- Required -->
 <?php
 if (version_compare('7.4', phpversion(), '>')) {
     die('You must be using PHP 7.4 or greater.');
@@ -15,6 +14,10 @@ require get_template_directory() . '/includes/post-types.php';
 function include_styles()
 
 {
+    wp_enqueue_style('normalize', 'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+    
     wp_enqueue_style(
         'google-fonts',
         'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'
@@ -96,3 +99,16 @@ add_action('after_setup_theme', 'add_post_thumbnails_support');
 // Custom taxonomies (categories) 
 
 require get_template_directory() . '/includes/taxonomies.php';
+
+
+// Sidebar
+
+function thd_register_sidebar()
+{
+    register_sidebar([
+        'name' => 'Primary Sidebar',
+        'id' => 'sidebar-primary',
+    ]
+    );
+}
+add_action('widgets_init', 'thd_register_sidebar');

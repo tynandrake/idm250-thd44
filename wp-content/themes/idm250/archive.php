@@ -6,6 +6,12 @@
 
 get_template_part('components/project-teaser');
 
-endwhile; ?>
+endwhile; 
+the_posts_pagination( [
+    'mid_size' => 2,
+    'prev_text' => 'Previous',
+    'next_text' => 'Next'
+]);
+?>
 
 <?php get_footer(); ?>
