@@ -6,13 +6,13 @@
 
 <?php while (have_posts()) : the_post(); ?>
 
-    <div class="">
+    <div>
 
-        <h1 class=""><?php the_title(); ?></h1>
+        <h1><?php the_title(); ?></h1>
 
         <?php the_field('post_title');?>
 
-        <div class="">
+        <div>
             <?php the_content(); ?>
         </div>
     </div>

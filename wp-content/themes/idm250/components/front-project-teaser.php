@@ -14,7 +14,7 @@ $project_query = new WP_Query($arg);
     <?php
     while ($project_query->have_posts()) : $project_query->the_post();
         ?>
-        <div class="front-inside-container" style="background-color:<?php the_field('teaser-color');?>">
+        <div class="front-inside-container" style="background-color:<?php the_field('teaser-color'); ?>">
             <div class="front-grid-wrapper">
                 <div class="front-grid-column-text">
                     <div class="front-grid-wrapper-labels">
@@ -29,7 +29,9 @@ $project_query = new WP_Query($arg);
                     <div class="front-post-button-wrapper"><a class="front-post-button" href="<?php the_permalink(); ?>">view work.</a></div>
                 </div>
                 <div class="front-grid-column-image-container">
-                    <div class="front-grid-column-image"><?php the_post_thumbnail() ?></div>
+                    <a href="<?php the_permalink(); ?>">
+                            <div class="front-grid-column-image"><?php the_post_thumbnail() ?></div>
+                    </a>
                 </div>
             </div>
         </div>

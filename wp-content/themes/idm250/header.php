@@ -13,7 +13,9 @@
     </div>
 
     <div class="header-container">
-        <img src="<?php echo get_template_directory_uri() ?>/dist/images/logo.svg" alt="logo image">
+        <a href="<?php echo home_url(); ?>" class="header-logo">
+            <img src="<?php echo get_template_directory_uri() ?>/dist/images/logo.svg" alt="logo image">
+        </a>
         <?php
         wp_nav_menu(
             [

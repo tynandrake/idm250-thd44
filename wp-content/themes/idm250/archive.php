@@ -1,17 +1,17 @@
 <?php get_header(); ?>
 
-<h1><?php the_archive_title(); ?></h1>
+    <h2 class="archive-title"><?php the_archive_title(); ?></h2>
+    <div>
+        <?php get_template_part('components/search', 'category-buttons'); ?>
+    </div>
 
-<?php while (have_posts()) : the_post(); 
+    <div>
+        <?php while (have_posts()) : the_post();
 
-get_template_part('components/project-teaser');
+            get_template_part('components/search', 'project-teaser');
 
-endwhile; 
-the_posts_pagination( [
-    'mid_size' => 2,
-    'prev_text' => 'Previous',
-    'next_text' => 'Next'
-]);
-?>
+        endwhile; 
+        ?>
+    </div>
 
 <?php get_footer(); ?>

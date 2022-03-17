@@ -1,25 +1,26 @@
-<?php 
-/* Template Name: Search Results */ 
-get_header();
+<?php
+/* Template Name: Search */
 ?>
-<?php 
-$args = [ 
-    's' => $_GET['s'],
-    'post_type' => $_GET['post_type'],
-];
+<?php get_header(); ?>
+<?php while (have_posts()) : the_post(); ?>
 
-$search_query = new WP_Query($args)
-?>
+    <h1><?php the_title(); ?></h1>
 
-<?php 
-    if($search_query->have_posts()) {
-        while ($search_query->have_posts()) : $search_query->the_post();
-        get_template_part('components/project-teaser');
-        endwhile;
-        wp_reset_postdata();
-    } else {
-        echo '<p>Sorry, no results available</p>';
-    }
+    <?php
+        get_template_part('components/search', 'form');
 
-    ?>
+        $terms = get_the_terms(get_the_ID(), 'thd-project-categories');
+        if ($terms) {
+            foreach ($terms as $term) {
+                echo $term->name . ',';
+            }
+        }
+        ?>
+
+    <div>
+        <?php the_content(); ?>
+    </div>
+
+<?php endwhile; ?>
+
 <?php get_footer(); ?>
