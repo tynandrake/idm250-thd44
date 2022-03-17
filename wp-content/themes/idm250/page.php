@@ -2,15 +2,12 @@
 
 <?php while(have_posts()) : the_post();?>
 
-<div class="">
+<div class="single-section-content">
 
-    <h1 class=""><?php the_title(); ?></h1>
+    <h1><?php the_title(); ?></h1>
 
-    <?php the_post_thumbnail();?>
+    <?php the_content(); ?>
 
-    <div class="">
-        <?php the_content(); ?>
-    </div>
 </div>
 
 <?php endwhile; ?>
